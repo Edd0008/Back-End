@@ -38,3 +38,29 @@ const entradaDeDados = readline.createInterface({
     input: process.stdin,
     output: process.stdout
 })
+
+//Entrada de dados do nome
+entradaDeDados.question('Digite o nome do aluno: ', function(nome){
+    //Recebe o nome do aluno
+    let nomeAluno = nome
+
+    //Entrada de dados nota 1
+    entradaDeDados.question('Digite a nota 1: ', function(valor1){
+        let nota1 = valor1
+
+        //Entrada de dados nota 2
+        entradaDeDados.question('Digite a nota 2: ', function(valor2){
+            let nota2 = valor2
+
+            //Entrada de dados nota 3
+            entradaDeDados.question('Digite a nota 3: ', function(valor3){
+                let nota3 = valor3
+
+                //Entrada de dados nota 4
+                entradaDeDados.question('Digite a nota 4: ', function(valor4){
+                    let nota4 = valor4
+                })
+            })
+        })
+    })
+})
