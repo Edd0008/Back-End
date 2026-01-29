@@ -28,6 +28,24 @@
              em MAIUSCULO para facilitar a sua utilização. POde ser
              criada de uma forma local ou global.
 
+    Operadores de comparação
+
+        == -> Permite a comparação de dois conteúdos
+        != -> Permite comparar a diferença de dois conteúdos
+        <  -> Permite validar o valor menor
+        >  -> Permite validar o valor maior
+        <= -> Permite validar se o valor é menor ou igual
+        >= -> Permite validar se o valor é maior ou igual
+        === -> Permite comparar a igualdade dos conteúdos e a igualdade da tipagem de dados
+        !== -> Permite comparar a diferença de conteúdos e a igualdade da tipagem de dados
+        ==! -> Permite comparar a igualdade de conteúdos e a diferença da tipagem de dados
+    
+    Operadores logicos
+
+        E   -> and -> &&
+        Ou  -> or  -> ||
+        Não -> not -> !
+
 */
 
 //import da biblioteca de entrada de dados
@@ -59,6 +77,8 @@ entradaDeDados.question('Digite o nome do aluno: ', function(nome){
                 //Entrada de dados nota 4
                 entradaDeDados.question('Digite a nota 4: ', function(valor4){
                     let nota4 = valor4
+
+                    if(nomeAluno == '')
                 })
             })
         })
