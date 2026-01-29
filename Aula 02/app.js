@@ -25,6 +25,16 @@
              ou seja, esse conteúdo não poderá sofrer mudanças
              durante o projeto.
              Dica: se possível você pode criar essa const escrita 
-             em MAIUSCULO para facilitar a sua utilização.
+             em MAIUSCULO para facilitar a sua utilização. POde ser
+             criada de uma forma local ou global.
 
 */
+
+//import da biblioteca de entrada de dados
+const readline = require('readline')
+
+//Criação do objeto para captar as entradas de dados
+const entradaDeDados = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+})
