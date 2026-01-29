@@ -78,7 +78,12 @@ entradaDeDados.question('Digite o nome do aluno: ', function(nome){
                 entradaDeDados.question('Digite a nota 4: ', function(valor4){
                     let nota4 = valor4
 
-                    if(nomeAluno == '')
+                    if(nomeAluno == '' || nota1 == '' || nota2 == '' || nota3 == '' || nota4 == ''){
+                        console.log('ERRO')
+                    }else{
+                        console.log('CALCULAR')
+                    }
+                    
                 })
             })
         })
