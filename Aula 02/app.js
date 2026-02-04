@@ -99,18 +99,26 @@ entradaDeDados.question('Digite o nome do aluno: ', function(nome){
                     }else if(isNaN(nota1) || isNaN(nota2) || isNaN(nota3) || isNaN(nota4) ){
                         console.log('ERRO: somente numeros são permitidos na entrada das notas')
                     }else{
+                        let statusAluno
+
                         let media = (Number(nota1) + Number(nota2) + Number(nota3) + Number(nota4)) /4
                         
-                        //toFixed() é um método que permite fixar a quantidade de casas decimais
-                        console.log(`O aluno(a) ${nomeAluno} teve a média final em: ${media.toFixed(2)}`)
+                       
                     
                     if(media >= 70){
-                        console.log(`O aluno(a) ${nomeAluno} esta APROVADO!!`)
-                    }else if(media < 50){ console.log(`O aluno(a) ${nomeAluno} esta REPROVADO!!`)
-                    }else{
-                        console.log(`O aluno(a) ${nomeAluno} esta de RECUPERAÇÃO!!`)
+                        statusAluno = 'APROVADO'
                     }
-                
+                    else if(media < 50){ 
+                        statusAluno = 'REPROVADO'
+                    }
+                    else{
+                        statusAluno = 'RECUPERAÇÃO'
+                    }
+
+                     //toFixed() é um método que permite fixar a quantidade de casas decimais
+                        console.log('====================================')
+                        console.log(`ALUNO: ${nomeAluno} \nMÉDIA FINAL: ${media.toFixed(2)}\nSTATUS DE APROVAÇÃO: ${statusAluno}`)
+                        console.log('====================================')
                 }
                 })
             })
