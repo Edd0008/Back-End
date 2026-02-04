@@ -88,7 +88,10 @@ entradaDeDados.question('Digite o nome do aluno: ', function(nome){
                     //isNAN() -> Permite a validação de numeros e letras    
                     }else if(isNaN(nota1) || isNaN(nota2) || isNaN(nota3) || isNaN(nota4) ){
                         console.log('ERRO: somente numeros são permitidos na entrada das notas')
-                    } console.log('Calcular')
+                    }else{
+                        let media = nota1 + nota2 + nota3 + nota4
+                        console.log(media)
+                    }
                 
                     
                 })
