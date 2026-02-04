@@ -89,7 +89,7 @@ entradaDeDados.question('Digite o nome do aluno: ', function(nome){
                     }else if(isNaN(nota1) || isNaN(nota2) || isNaN(nota3) || isNaN(nota4) ){
                         console.log('ERRO: somente numeros são permitidos na entrada das notas')
                     }else{
-                        let media = nota1 + nota2 + nota3 + nota4
+                        let media = Number (nota1) + Number(nota2) + Number(nota3) + Number(nota4)
                         console.log(media)
                     }
                 
