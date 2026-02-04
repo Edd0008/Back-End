@@ -101,11 +101,17 @@ entradaDeDados.question('Digite o nome do aluno: ', function(nome){
                     }else{
                         let media = (Number(nota1) + Number(nota2) + Number(nota3) + Number(nota4)) /4
                         
-                        //roFixed() é um método que permite fixar a quantidade de casas decimais
+                        //toFixed() é um método que permite fixar a quantidade de casas decimais
                         console.log(`O aluno(a) ${nomeAluno} teve a média final em: ${media.toFixed(2)}`)
+                    
+                    if(media >= 70){
+                        console.log(`O aluno(a) ${nomeAluno} esta APROVADO!!`)
+                    }else if(media < 50){ console.log(`O aluno(a) ${nomeAluno} esta REPROVADO!!`)
+                    }else{
+                        console.log(`O aluno(a) ${nomeAluno} esta de RECUPERAÇÃO!!`)
                     }
                 
-                    
+                }
                 })
             })
         })
