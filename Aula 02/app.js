@@ -46,6 +46,14 @@
         Ou  -> or  -> ||
         Não -> not -> !
 
+
+    Formas de conversão de tipos de dados
+        parseInt() -> Permite converter um conteúdo em número do tipo INTEIRO
+        parseFloat() -> Permite converter um conteúdo em número do tipo DECIMAL
+        Number() -> Permite converter um conteúdo em número do tipo DECIMAL ou INTEIRO
+        String() -> Permite ocnverter um conteúdo em STRING
+        boolean() -> Permite converter um conteudo para BOOLEANO (true ou false)
+
 */
 
 //import da biblioteca de entrada de dados
@@ -89,7 +97,7 @@ entradaDeDados.question('Digite o nome do aluno: ', function(nome){
                     }else if(isNaN(nota1) || isNaN(nota2) || isNaN(nota3) || isNaN(nota4) ){
                         console.log('ERRO: somente numeros são permitidos na entrada das notas')
                     }else{
-                        let media = Number (nota1) + Number(nota2) + Number(nota3) + Number(nota4)
+                        let media = Number(nota1) + Number(nota2) + Number(nota3) + Number(nota4)
                         console.log(media)
                     }
                 
