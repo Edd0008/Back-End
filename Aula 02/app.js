@@ -54,6 +54,8 @@
         String() -> Permite ocnverter um conteúdo em STRING
         boolean() -> Permite converter um conteudo para BOOLEANO (true ou false)
 
+        typeof() -> Retorna tipo de dasdos de uma varável (String, Nuber, boolean ou object)
+
 */
 
 //import da biblioteca de entrada de dados
@@ -97,8 +99,10 @@ entradaDeDados.question('Digite o nome do aluno: ', function(nome){
                     }else if(isNaN(nota1) || isNaN(nota2) || isNaN(nota3) || isNaN(nota4) ){
                         console.log('ERRO: somente numeros são permitidos na entrada das notas')
                     }else{
-                        let media = Number(nota1) + Number(nota2) + Number(nota3) + Number(nota4)
-                        console.log(media)
+                        let media = (Number(nota1) + Number(nota2) + Number(nota3) + Number(nota4)) /4
+                        
+                        //roFixed() é um método que permite fixar a quantidade de casas decimais
+                        console.log(`O aluno(a) ${nomeAluno} teve a média final em: ${media.toFixed(2)}`)
                     }
                 
                     
