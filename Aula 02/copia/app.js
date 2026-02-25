@@ -2,7 +2,7 @@
  * Objetivo: Projeto para realizar o calculo de medias escolares
  * Autor: Edison
  * Data: 29/01/2026
- * Versão: 1.1
+ * Versão: 1.0
  *****************************************************************/
 
 /*
@@ -101,11 +101,11 @@ entradaDeDados.question('Digite o nome do aluno: ', function(nome){
                     }else{
                         let statusAluno
 
-                        //let media = (Number(nota1) + Number(nota2) + Number(nota3) + Number(nota4)) /4
+                        let media = (Number(nota1) + Number(nota2) + Number(nota3) + Number(nota4)) /4
                         
                        
                     
-                    /*if(media >= 70){
+                    if(media >= 70){
                         statusAluno = 'APROVADO'
                     }
                     else if(media < 50){ 
@@ -114,23 +114,10 @@ entradaDeDados.question('Digite o nome do aluno: ', function(nome){
                     else{
                         statusAluno = 'RECUPERAÇÃO'
                     }
-*/
-
-                    let calculos = require('./modulo/calculos.js')
-                    let mediaFinal = calculos.calcularMedia (nota1, nota2, nota3, nota4)
-
-                    if(mediaFinal){
-                        console.log('A media é: ' + mediaFinal)
-                    }else{
-                        console.log('ERRO: não foi possível processar o calculo.')
-                        entradaDeDados.close()
-
-                    }
-                    
 
                      //toFixed() é um método que permite fixar a quantidade de casas decimais
                         console.log('====================================')
-                        console.log(`ALUNO: ${nomeAluno} \nMÉDIA FINAL: ${mediaFinal}\nSTATUS DE APROVAÇÃO: ${statusAluno}`)
+                        console.log(`ALUNO: ${nomeAluno} \nMÉDIA FINAL: ${media.toFixed(2)}\nSTATUS DE APROVAÇÃO: ${statusAluno}`)
                         console.log('====================================')
                 }
                 })
@@ -138,4 +125,3 @@ entradaDeDados.question('Digite o nome do aluno: ', function(nome){
         })
     })
 })
-            
